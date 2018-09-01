@@ -1,0 +1,7 @@
+mos call OTA.Update {"url": "https://s3.ap-south-1.amazonaws.com/neuralfirmware/fw.zip","commit_timeout":300}
+
+mos config-set dash.enable=true dash.token=d83b3d1d08c0130bbcad39db
+
+
+curl -H 'Authorization: Bearer d83b3d1d08c0130bbcad39db' -v -F file=@D:\Knowledgebase\mongoose\buildprocess\demo-js-master\build\fw.zip http://dash.mongoose-os.com/api/v2/devices/esp32_752350/ota true
+

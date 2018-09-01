@@ -1,0 +1,61 @@
+Using port COM8
+AWS region: ap-south-1
+Connecting to the device...
+  esp32 30AEA4752350 running demo-js
+Current MQTT config: {
+  "clean_session": true,
+  "client_id": "",
+  "enable": false,
+  "keep_alive": 60,
+  "max_qos": 2,
+  "pass": "",
+  "reconnect_timeout_max": 60.000000,
+  "reconnect_timeout_min": 2.000000,
+  "recv_mbuf_limit": 8192,
+  "server": "iot.eclipse.org:1883",
+  "ssl_ca_cert": "",
+  "ssl_cert": "",
+  "ssl_cipher_suites": "",
+  "ssl_key": "",
+  "ssl_psk_identity": "",
+  "ssl_psk_key": "",
+  "user": "",
+  "will_message": "",
+  "will_topic": ""
+}
+Current AWS Greengrass config: {
+  "enable": false,
+  "reconnect_timeout_max": 60,
+  "reconnect_timeout_min": 2
+}
+Generating ECDSA private key
+Generating certificate request, CN: esp32_752350
+Asking AWS for a certificate...
+
+Certificate info:
+  Subject : CN=esp32_752350
+  Issuer  : OU=Amazon Web Services O=Amazon.com Inc. L=Seattle ST=Washington C=US
+  Serial  : 166223521684594700123624794829130921436936971855
+  Validity: 2018/08/22 - 2049/12/31
+  Key algo: ECDSA
+  Sig algo: SHA256-RSA
+  ID      : 8808d4a8b6cb9420e5d7536cfcbbc5f3a7f6939b1614df07a69a46fb149afc0d
+  ARN     : arn:aws:iot:ap-south-1:800820290373:cert/8808d4a8b6cb9420e5d7536cfcbbc5f3a7f6939b1614df07a69a46fb149afc0d
+AWS region: ap-south-1
+Creating policy "mos-default" ({"Statement": [{"Effect": "Allow", "Action": "iot:*", "Resource": "*"}], "Version": "2012-10-17"})...
+Attaching policy "mos-default" to the certificate...
+Attaching the certificate to "esp32_752350"...
+Writing certificate to aws-esp32_752350.crt.pem...
+Uploading aws-esp32_752350.crt.pem (1136 bytes)...
+Writing key to aws-esp32_752350.key.pem...
+Uploading aws-esp32_752350.key.pem (227 bytes)...
+
+Updating config:
+  aws.thing_name = esp32_752350
+  mqtt.enable = true
+  mqtt.server = a1eb1m7eokmdbb.iot.ap-south-1.amazonaws.com:8883
+  mqtt.ssl_ca_cert = ca.pem
+  mqtt.ssl_cert = aws-esp32_752350.crt.pem
+  mqtt.ssl_key = aws-esp32_752350.key.pem
+Setting new configuration...
+Saving and rebooting...
